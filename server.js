@@ -42,6 +42,13 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects website',
+    welcomeMessage: 'Welcome!'
+  });
+});
+
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About PAGE'
@@ -54,10 +61,6 @@ app.get('/bad', (req, res) => {
     errorMessage: 'Bad request!'
   });
 })
-
-// app.listen(3000, () => {
-//   console.log('Server is up on port 3000');
-// });
 
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
